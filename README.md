@@ -1,14 +1,14 @@
 # NameGenerator
 
-A multi-layered perceptron language model that generates name-like sequences given a training set of names. For example, feeding it a text files of 10k English names, it can generate sequences that are totally novel but similar to those names.
+A multi-layered perceptron language model that generates name-like sequences given a training set of names, written in my own APIs (using only torch.tensor(())). For example, feeding it a text files of 10k English names, it can generate sequences that are totally novel but similar to those names.
 
 ## Technologies
 
-- Implemented a embedding layer in the beginning and a softmax layer at the end to represent tokens and calculate the probability for any given token to be generated next. 
+- Manually implemented a embedding layer in the beginning and a softmax layer at the end to represent tokens and calculate the probability for any given token to be generated next. 
 
-- Improved the model's performance by designing multiple dilated hidden layers that, instead of being fully connected to the input layer, take inputs in batches of two tokens to learn the weights more gradually.
+- Improved the model's performance by manually implementing multiple dilated hidden layers that, instead of being fully connected to the input layer, take inputs in batches of two tokens to learn the weights more gradually.
 
-- Improved the backward pass quality of the model by implementing batch normalizations and non-linear activations, making sure the weights are Gaussian-distrbuted.
+- Improved the backward pass quality of the model by manually implementing batch normalizations and non-linear activations, making sure the weights are Gaussian-distrbuted.
 
 ## Performance
 
